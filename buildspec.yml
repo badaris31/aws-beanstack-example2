@@ -2,15 +2,15 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      -echo "entered prebuild phase"
+    -echo "entered prebuild phase"
   build:
     commands:
-      -echo "entered build phase"
-      -maven clean prepare-package war:explode
+    -echo "entered build phase"
+    -maven clean prepare-package war:explode
   post_build:
     commands:
-      -echo "entered post build phase"
-      -mv target/deploy ./
+    -echo "entered post build phase"
+    -mv target/deploy ./
 artifacts:
   files:
     -deploy/**/*
